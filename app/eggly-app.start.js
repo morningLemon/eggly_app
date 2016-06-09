@@ -34,6 +34,8 @@ angular.module('Eggly', [])
     $scope.setCurrentCategory = setCurrentCategory;
     $scope.isCurrentCategory = isCurrentCategory;
     
+    $scope.editedBookmark = null;
+    
     //--------------------------------------------------------------------------//
     // Creating & Editing States                                               //
     //------------------------------------------------------------------------// 
