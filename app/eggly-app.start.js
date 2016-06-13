@@ -156,6 +156,13 @@ angular.module('Eggly', [])
             resetCreateForm();
         }
 
+        function setEditedBookmark(bookmark) {
+            Scope.editedBookmark = bookmark;
+        }
+
         $scope.createBookmark = createBookmark;
+        $scope.editedBookmark = null;
+
+        $scope.setEditedBookmark = setEditedBookmark;
 
     });
