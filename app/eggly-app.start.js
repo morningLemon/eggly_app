@@ -167,10 +167,19 @@ angular.module('Eggly', [])
             $scope.isEditing = false;
         }
 
+        function deleteBookmark(bookmark) {
+            $log.debug('all bookmarks: ', $scope.bookmarks);
+            var removedBookmark = _.remove($scope.bookmarks, function (b) {
+                return b.id == bookmark.id;
+            });
+            $log.debug('removed bookmark title: ', removedBookmark[0].title);
+        }
+
         $scope.createBookmark = createBookmark;
         $scope.editedBookmark = null;
 
         $scope.setEditedBookmark = setEditedBookmark;
         $scope.updateBookmark = updateBookmark;
+        $scope.deleteBookmark = deleteBookmark;
 
     });
